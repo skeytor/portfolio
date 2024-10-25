@@ -41,19 +41,19 @@ const PROJECTS: Project[] = [
       text ever since the 1500s, when an unknown printer took a galley 
       of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing 
       and typesetting industry.`,
-    github: "github",
+    github: "github1",
     image: "/src/assets/image.webp",
     tags: TAGS.filter((tag) => ["C#", "SQL Server"].includes(tag.name)),
   },
   {
-    title: "Title 1",
+    title: "Title 2",
     description: `Lorem Ipsum is simply dummy text of the printing 
       and typesetting industry. 
       Lorem Ipsum has been the industry's standard dummy 
       text ever since the 1500s, when an unknown printer took a galley 
       of type and scrambled it to make a type specimen book.`,
     link: "www.google.com",
-    github: "github",
+    github: "github2",
     image: "/src/assets/image.webp",
     tags: TAGS.filter((tag) => ["C#"].includes(tag.name)),
   },
@@ -62,8 +62,8 @@ const PROJECTS: Project[] = [
 export const Projects = () => {
   return (
     <div className="flex flex-col gap-y-16 mt-5 mb-4">
-      {PROJECTS.map((project, index) => (
-        <CardProject key={index} project={{ ...project }} />
+      {PROJECTS.map((project) => (
+        <CardProject key={project.github} project={{ ...project }} />
       ))}
     </div>
   );

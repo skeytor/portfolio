@@ -8,7 +8,7 @@ interface Props {
 export const SectionContainer = ({ children, id, className }: Props) => {
   return (
     <section
-      id={id ?? ""}
+      id={id}
       className={`scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl ${className}`}
     >
       {children}

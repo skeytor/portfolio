@@ -19,11 +19,9 @@ export const CardProject = ({
             loading="lazy"
             src={image}
           />
-
-          {/* Move tags section here, below the image */}
           <ul className="flex flex-wrap justify-center mt-4 mb-4 gap-x-2">
-            {tags.map((tag, index) => (
-              <li key={index}>
+            {tags.map((tag) => (
+              <li key={tag.name}>
                 <span
                   className={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
                 >
@@ -35,7 +33,6 @@ export const CardProject = ({
           </ul>
         </div>
       </div>
-
       <div className="w-full md:w-1/2 md:max-w-lg">
         <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
           {title}
