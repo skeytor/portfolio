@@ -2,8 +2,10 @@ import { Badge } from "./components/Badge";
 import { SectionContainer } from "./components/SectionContainer";
 import { Experience } from "./components/Experience";
 import { Header } from "./components/Header";
-import { SocialMediaSection } from "./components/SocialMediaSection";
+import { SocialNetworkSection } from "./components/SocialNetworkSection";
 import Briefcase from "./icons/Briefcase";
+import { Projects } from "./components/Projects";
+import { FolderIcon } from "./icons/Folder";
 
 export const App = () => {
   return (
@@ -23,7 +25,7 @@ export const App = () => {
             </a>
           </h1>
           <h2 className="text-xl">As a software developer fullstack</h2>
-          <SocialMediaSection />
+          <SocialNetworkSection />
         </main>
       </SectionContainer>
       <SectionContainer id="experience">
@@ -32,6 +34,13 @@ export const App = () => {
           Laboral Experience
         </h2>
         <Experience />
+      </SectionContainer>
+      <SectionContainer id="projects">
+        <h2 className="text-2xl font-semibold flex gap-x-1">
+          <FolderIcon className="size-7" />
+          Projects
+        </h2>
+        <Projects />
       </SectionContainer>
     </>
   );

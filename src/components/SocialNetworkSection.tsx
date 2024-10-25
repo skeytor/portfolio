@@ -3,13 +3,13 @@ import GmailIcon from "../icons/Gmail";
 import LinkedInIcon from "../icons/LinkedIn";
 import { SocialPill } from "./SocialPill";
 
-interface SocialMedia {
+interface SocialNetwork {
   url: string;
   icon: JSX.Element;
   label: string;
 }
 
-const SOCIAL_MEDIA: SocialMedia[] = [
+const SOCIAL_NETWORKS: SocialNetwork[] = [
   {
     url: "https://www.linkedin.com/in/rober-guerrero/",
     icon: <LinkedInIcon className="size-6" />,
@@ -27,12 +27,12 @@ const SOCIAL_MEDIA: SocialMedia[] = [
   },
 ];
 
-export const SocialMediaSection = () => {
+export const SocialNetworkSection = () => {
   return (
     <nav className="flex gap-x-4 mt-6">
-      {SOCIAL_MEDIA.map((socialMedia) => (
-        <SocialPill key={socialMedia.url} url={socialMedia.url}>
-          {socialMedia.icon} {socialMedia.label}
+      {SOCIAL_NETWORKS.map((socialNetwork) => (
+        <SocialPill key={socialNetwork.url} url={socialNetwork.url}>
+          {socialNetwork.icon} {socialNetwork.label}
         </SocialPill>
       ))}
     </nav>

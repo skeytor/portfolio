@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 
-interface SocialPillProps {
+interface Props {
   children?: ReactNode;
   url: string;
 }
-export const SocialPill = ({ children, url }: SocialPillProps) => {
+export const SocialPill = ({ children, url }: Props) => {
   return (
     <a
       className="`

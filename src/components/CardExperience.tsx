@@ -1,10 +1,10 @@
 import { ExperienceItem } from "./Experience";
 
-interface CardExperienceProps {
-  data: ExperienceItem;
+interface Props {
+  experience: ExperienceItem;
 }
 
-export const CardExperience = ({ data }: CardExperienceProps) => {
+export const CardExperience = ({ experience: data }: Props) => {
   return (
     <>
       <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
