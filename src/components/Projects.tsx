@@ -128,7 +128,7 @@ const PROJECTS: Project[] = [
     without modifying the source code. This is achieved by implementing a CustomAuthorization attribute 
     to manage policy-based authorization dynamically`,
     github: "https://github.com/skeytor/AuthHub",
-    image: "/src/assets/code.webp",
+    image: "/code.webp",
     tags: TAGS.filter((tag) =>
       [
         "C#",
@@ -148,7 +148,7 @@ const PROJECTS: Project[] = [
       normalized database. The user-friendly interface, created with Angular 17, Tailwind CSS, and Angular Material,
       ensures smooth navigation and efficient letter management.`,
     github: "https://github.com/skeytor/comunitrack",
-    image: "/src/assets/code.webp",
+    image: "/code.webp",
     tags: TAGS.filter((tag) =>
       [
         "C#",
@@ -172,7 +172,7 @@ const PROJECTS: Project[] = [
       architecture for structured development. The user interface designed with Angular, is intuitive
       and user-friendly.`,
     github: "https://github.com/skeytor/sistema-inventario-angular",
-    image: "/src/assets/code.webp",
+    image: "/code.webp",
     tags: TAGS.filter((tag) =>
       [
         "Python",

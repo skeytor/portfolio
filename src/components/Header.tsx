@@ -36,7 +36,7 @@ export const Header = () => {
     >
       <div className="flex items-center justify-center mx-auto">
         <img
-          src="/src/assets/profile.webp"
+          src="/profile.webp"
           className="rounded-full size-12 "
           alt="Rober"
         />
