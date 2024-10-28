@@ -7,9 +7,9 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { path: "#top", title: "Home" },
-  { path: "#about", title: "About" },
   { path: "#experience", title: "Experience" },
   { path: "#projects", title: "Projects" },
+  { path: "#about", title: "About" },
   { path: "#contact", title: "Contact" },
 ];
 

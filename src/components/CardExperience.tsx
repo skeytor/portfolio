@@ -11,7 +11,9 @@ export const CardExperience = ({ experience: data }: Props) => {
       <h3 className="text-xl font-bold text-gray-900 dark:text-sky-400">
         {data.title}
       </h3>
-      <h4 className="ext-xl font-bold text-gray-900 dark:text-gray-100">{data.company}</h4>
+      <h4 className="ext-xl font-bold text-gray-900 dark:text-gray-100">
+        {data.company}
+      </h4>
       <time className="mb-1 text-sm leading-none text-gray-400 dark:text-gray-400">
         {data.date}
       </time>
@@ -21,7 +23,7 @@ export const CardExperience = ({ experience: data }: Props) => {
       </p>
       {data.link ? (
         <a
-          href="#"
+          href={data.link}
           className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
         >
           Learn more{" "}

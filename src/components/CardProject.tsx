@@ -23,10 +23,10 @@ export const CardProject = ({
             {tags.map((tag) => (
               <li key={tag.name}>
                 <span
-                  className={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
+                  className={`flex gap-x-2 rounded-full text-xs mb-1 py-1 px-2 ${tag.class}`}
                 >
                   {tag.icon}
-                  {tag.name}
+                  {/* {tag.name} */}
                 </span>
               </li>
             ))}
