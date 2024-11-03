@@ -31,7 +31,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed flex top-0 z-10 w-full transition-all duration-300 
+      className={`fixed flex top-0 z-10 w-full py-1 transition-all duration-300 
       ${isScrolled ? "bg-gray-800 bg-opacity-90 shadow-lg backdrop-blur-md" : "mt-5 bg-transparent"}`}
     >
       <div className="flex items-center justify-center mx-auto">

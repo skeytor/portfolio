@@ -3,8 +3,8 @@ import { SocialNetworkSection } from "./SocialNetworkSection";
 
 export const Hero = () => {
   return (
-    <main>
-      <h1 className="text-white text-5xl font-bold flex flex-row gap-x-4">
+    <div className="max-w-xl">
+      <h1 className="text-white text-4xl font-bold flex flex-row gap-x-4">
         Hi there!
         <span className="inline-flex animate-text-gradient bg-gradient-to-r from-[#b2a8fd] via-[#8678f9] to-[#c7d2fe] bg-[200%_auto] bg-clip-text text-transparent">
           I am Rober
@@ -28,6 +28,6 @@ export const Hero = () => {
         <strong>sustainability</strong> in every development.
       </p>
       <SocialNetworkSection />
-    </main>
+    </div>
   );
 };

@@ -6,7 +6,7 @@ interface Props {
 
 export const CardExperience = ({ experience: data }: Props) => {
   return (
-    <>
+    <div className="max-w-3xl">
       <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-sky-400"></div>
       <h3 className="text-xl font-bold text-gray-900 dark:text-sky-400">
         {data.title}
@@ -46,6 +46,6 @@ export const CardExperience = ({ experience: data }: Props) => {
       ) : (
         <></>
       )}
-    </>
+    </div>
   );
 };

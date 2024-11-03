@@ -13,30 +13,32 @@ export const App = () => {
   return (
     <>
       <Header />
-      <SectionContainer id="top" className="py-44 pb-24">
-        <Hero />
-      </SectionContainer>
-      <SectionContainer id="experience">
-        <h2 className="text-2xl font-semibold flex gap-x-1">
-          <Briefcase className="size-7" />
-          Laboral Experience
-        </h2>
-        <Experience />
-      </SectionContainer>
-      <SectionContainer id="projects">
-        <h2 className="text-2xl font-semibold flex gap-x-1">
-          <FolderIcon className="size-7" />
-          Projects
-        </h2>
-        <Projects />
-      </SectionContainer>
-      <SectionContainer id="about">
-        <h2 className="text-2xl font-semibold flex gap-x-1">
-          <ProgressCheckIcon className="size-7" />
-          About
-        </h2>
-        <About />
-      </SectionContainer>
+      <main className="px-4">
+        <SectionContainer id="top" className="py-44 pb-24">
+          <Hero />
+        </SectionContainer>
+        <SectionContainer id="experience">
+          <h2 className="text-2xl font-semibold flex gap-x-1">
+            <Briefcase className="size-7" />
+            Professional Experience
+          </h2>
+          <Experience />
+        </SectionContainer>
+        <SectionContainer id="projects">
+          <h2 className="text-2xl font-semibold flex gap-x-1">
+            <FolderIcon className="size-7" />
+            Projects
+          </h2>
+          <Projects />
+        </SectionContainer>
+        <SectionContainer id="about">
+          <h2 className="text-2xl font-semibold flex gap-x-1">
+            <ProgressCheckIcon className="size-7" />
+            About
+          </h2>
+          <About />
+        </SectionContainer>
+      </main>
       <Footer />
     </>
   );

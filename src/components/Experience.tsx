@@ -11,7 +11,7 @@ export interface ExperienceItem {
 const EXPERIENCE_ITMES: ExperienceItem[] = [
   {
     date: "January 2024",
-    title: "FullStack Developer",
+    title: "FullStack Developer - Internship",
     description: `I developed a web system for managing document tracking within the organization, 
     handling both the backend with ASP.NET Core and the frontend using Angular. 
     I applied the CQRS pattern for optimized performance and scalability. 
@@ -21,7 +21,7 @@ const EXPERIENCE_ITMES: ExperienceItem[] = [
   },
   {
     date: "April 2023",
-    title: "Support IT - Intership",
+    title: "IT Support - Internship",
     description: `I implemented and managed a print server that improved resource efficiency 
     and was replicated nationwide. 
     I optimized print reports using Python and Power BI, 
@@ -31,7 +31,7 @@ const EXPERIENCE_ITMES: ExperienceItem[] = [
   },
   {
     date: "October 2022",
-    title: "Web Developer - Intership",
+    title: "Web Developer - Internship",
     description: `I developed a web system for managing product inventory. 
     I utilized SCRUM and Azure DevOps for project management and created UML 
     diagrams to help in design clarity. I designed the PostgreSQL database with 
