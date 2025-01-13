@@ -1,4 +1,4 @@
-import { ExperienceItem } from "./Experience";
+import { ExperienceItem } from "../types";
 
 interface Props {
   experience: ExperienceItem;
