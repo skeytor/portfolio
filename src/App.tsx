@@ -1,13 +1,15 @@
 import { SectionContainer } from "./components/SectionContainer";
-import { Experience } from "./components/Experience";
+import { Experience } from "./pages/Experience";
 import { Header } from "./components/Header";
 import Briefcase from "./icons/Briefcase";
-import { Projects } from "./components/Projects";
 import { FolderIcon } from "./icons/Folder";
-import { About } from "./components/About";
+import { About } from "./pages/About";
 import { ProgressCheckIcon } from "./icons/ProgressCheck";
-import { Hero } from "./components/Hero";
+import { Hero } from "./pages/Hero";
 import { Footer } from "./components/Footer";
+// import { Contact } from "./pages/Contact";
+// import { ProfileIcon } from "./icons/Profile";
+import { Projects } from "./pages/Projects";
 
 export const App = () => {
   return (
@@ -38,6 +40,13 @@ export const App = () => {
           </h2>
           <About />
         </SectionContainer>
+        {/* <SectionContainer id="contact">
+          <h2 className="text-2xl font-semibold flex gap-x-1">
+            <ProfileIcon className="size-7" />
+            Contact Me
+          </h2>
+          <Contact />
+        </SectionContainer> */}
       </main>
       <Footer />
     </>

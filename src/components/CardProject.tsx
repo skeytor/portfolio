@@ -1,13 +1,14 @@
 import { ExternalLink } from "../icons/ExternalLink";
 import GithubIcon from "../icons/GitHub";
+import { Project } from "../types";
 import { LinkButton } from "./LinkButton";
-import { Project } from "./Projects";
+
 
 interface Props {
   project: Project;
 }
 export const CardProject = ({
-  project: { description, image, tags, title, github, link },
+  project: { description, image, tags, title, github, link, isPrivate },
 }: Props) => {
   return (
     <article className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
@@ -41,7 +42,7 @@ export const CardProject = ({
           {description}
         </div>
         <footer className="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
+          {github && !isPrivate &&(
             <LinkButton url={github}>
               <GithubIcon className="size-6" />
               Code

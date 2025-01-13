@@ -1,3 +1,4 @@
+import { CardProject } from "../components/CardProject";
 import { AngularIcon } from "../icons/Angular";
 import { AzureDevOpsIcon } from "../icons/Azure";
 import CSharpIcon from "../icons/CSharp";
@@ -12,39 +13,7 @@ import PythonIcon from "../icons/Python";
 import MicrosoftSQLServerIcon from "../icons/SQLServer";
 import { SwaggerIcon } from "../icons/Swagger";
 import { UMLIcon } from "../icons/UML";
-import { CardProject } from "./CardProject";
-
-export interface Project {
-  title: string;
-  description: string;
-  link?: string;
-  github: string;
-  image: string;
-  tags: Tag[];
-}
-
-type TagType =
-  | "C#"
-  | "SQL Server"
-  | "Docker"
-  | "JWT"
-  | "Swagger"
-  | "Git"
-  | "Github"
-  | "Angular"
-  | "MaterialUI"
-  | "UML"
-  | ".NET Core"
-  | "Python"
-  | "Django"
-  | "PostgreSQL"
-  | "Azure DevOps";
-
-interface Tag {
-  name: TagType;
-  icon: JSX.Element;
-  class: string;
-}
+import { Project, Tag } from "../types";
 
 const TAGS: Tag[] = [
   {
@@ -140,6 +109,7 @@ const PROJECTS: Project[] = [
         "Git",
       ].includes(tag.name)
     ),
+    isPrivate: false,
   },
   {
     title: "ComuniTrack",
@@ -163,6 +133,7 @@ const PROJECTS: Project[] = [
         "Azure DevOps",
       ].includes(tag.name)
     ),
+    isPrivate: true,
   },
   {
     title: "Inventory System",
@@ -185,6 +156,7 @@ const PROJECTS: Project[] = [
         "Azure DevOps",
       ].includes(tag.name)
     ),
+    isPrivate: false,
   },
 ];
 

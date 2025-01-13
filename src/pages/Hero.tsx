@@ -1,5 +1,5 @@
-import { Badge } from "./Badge";
-import { SocialNetworkSection } from "./SocialNetworkSection";
+import { Badge } from "../components/Badge";
+import { SocialNetworkSection } from "../components/SocialNetworkSection";
 
 export const Hero = () => {
   return (

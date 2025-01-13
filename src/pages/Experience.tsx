@@ -1,12 +1,5 @@
-import { CardExperience } from "./CardExperience";
-
-export interface ExperienceItem {
-  date: string;
-  title: string;
-  description: string;
-  company?: string;
-  link?: string;
-}
+import { CardExperience } from "../components/CardExperience";
+import { ExperienceItem } from "../types";
 
 const EXPERIENCE_ITMES: ExperienceItem[] = [
   {
