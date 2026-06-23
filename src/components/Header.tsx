@@ -9,6 +9,8 @@ const NAV_ITEMS: NavItem[] = [
   { path: "#top", title: "Home" },
   { path: "#experience", title: "Experience" },
   { path: "#projects", title: "Projects" },
+  { path: "#stack", title: "Stack" },
+  { path: "#education", title: "Education" },
   { path: "#about", title: "About" },
 ];
 

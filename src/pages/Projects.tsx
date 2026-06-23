@@ -91,11 +91,7 @@ const TAGS: Tag[] = [
 const PROJECTS: Project[] = [
   {
     title: "AuthHub",
-    description: `This project provides a secure and dynamic 
-    solution for authentication and authorization, focusing on role-based access control with 
-    permission-based policies. The key feature is its flexibility, allowing the addition of new roles 
-    without modifying the source code. This is achieved by implementing a CustomAuthorization attribute 
-    to manage policy-based authorization dynamically`,
+    description: `A secure authentication and authorization API focused on role-based access control with permission-based policies. Roles can be added dynamically without touching the source code, thanks to a custom authorization attribute that handles policy evaluation at runtime.`,
     github: "https://github.com/skeytor/AuthHub",
     image: "code-1.webp",
     tags: TAGS.filter((tag) =>
@@ -107,16 +103,13 @@ const PROJECTS: Project[] = [
         "JWT",
         "Swagger",
         "Git",
-      ].includes(tag.name)
+      ].includes(tag.name),
     ),
     isPrivate: false,
   },
   {
     title: "ComuniTrack",
-    description: `Comunitrack is a web system for managing and tracking letters within an organization. 
-      Built with ASP.NET Core and CQRS for optimized performance, it uses SQL Server for a scalable, 
-      normalized database. The user-friendly interface, created with Angular 17, Tailwind CSS, and Angular Material,
-      ensures smooth navigation and efficient letter management.`,
+    description: `A web system for managing and tracking internal letters across an organization. Built with ASP.NET Core and the CQRS pattern for performance, it uses SQL Server as the database and Angular 17 with Angular Material for the frontend.`,
     github: "https://github.com/skeytor/comunitrack",
     image: "code-1.webp",
     tags: TAGS.filter((tag) =>
@@ -131,17 +124,13 @@ const PROJECTS: Project[] = [
         "JWT",
         "Git",
         "Azure DevOps",
-      ].includes(tag.name)
+      ].includes(tag.name),
     ),
     isPrivate: true,
   },
   {
     title: "Inventory System",
-    description: `This web application allows the compnay to manage product stock efficiently. It
-      integrates with logistics to meet business requiremnts, providing visibility into inventory levels.
-      Built on a scalable PostgreSQL database, the system uses Django for backend funcionality and MVC
-      architecture for structured development. The user interface designed with Angular, is intuitive
-      and user-friendly.`,
+    description: `A web application for managing product stock across logistics and warehouse operations. Built with Django (MVC) and a normalized PostgreSQL database on the backend, and Angular with Tailwind CSS on the frontend.`,
     github: "https://github.com/skeytor/sistema-inventario-angular",
     image: "code-1.webp",
     tags: TAGS.filter((tag) =>
@@ -154,7 +143,7 @@ const PROJECTS: Project[] = [
         "JWT",
         "Git",
         "Azure DevOps",
-      ].includes(tag.name)
+      ].includes(tag.name),
     ),
     isPrivate: false,
   },
@@ -162,7 +151,7 @@ const PROJECTS: Project[] = [
 
 export const Projects = () => {
   return (
-    <div className="flex flex-col gap-y-16 mt-5 mb-9 ml-3">
+    <div className="flex flex-col gap-4 mt-6 mb-9">
       {PROJECTS.map((project) => (
         <CardProject key={project.github} project={{ ...project }} />
       ))}

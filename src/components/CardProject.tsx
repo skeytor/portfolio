@@ -1,60 +1,88 @@
-import { ExternalLink } from "../icons/ExternalLink";
 import GithubIcon from "../icons/GitHub";
+import { ExternalLink } from "../icons/ExternalLink";
 import { Project } from "../types";
-import { LinkButton } from "./LinkButton";
-
 
 interface Props {
   project: Project;
 }
+
 export const CardProject = ({
-  project: { description, image, tags, title, github, link, isPrivate },
+  project: { description, tags, title, github, link, isPrivate },
 }: Props) => {
   return (
-    <article className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-      <div className="w-full md:w-1/2">
-        <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-          <img
-            alt={`Screen of ${image}`}
-            className="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-            loading="lazy"
-            src={image}
-          />
-          <ul className="flex flex-wrap justify-center mt-4 mb-4 gap-x-2">
+    <article className="flex flex-col sm:flex-row gap-6 p-6 rounded-2xl border border-gray-700/50 bg-gray-900/40 hover:border-gray-600 transition-colors duration-300">
+      {/* Content */}
+      <div className="flex flex-col gap-3 flex-1">
+        <div className="flex items-center gap-3">
+          <h3 className="text-xl font-bold text-gray-100">{title}</h3>
+          <span
+            className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium
+              ${isPrivate
+                ? "bg-gray-800 text-gray-400 border border-gray-600"
+                : "bg-emerald-900/50 text-emerald-400 border border-emerald-700/60"
+              }`}
+          >
+            {isPrivate ? (
+              <>
+                <svg xmlns="http://www.w3.org/2000/svg" className="size-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                Private
+              </>
+            ) : (
+              <>
+                <svg xmlns="http://www.w3.org/2000/svg" className="size-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                Public
+              </>
+            )}
+          </span>
+        </div>
+
+        <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
+
+        <div className="flex items-center justify-between flex-wrap gap-3 mt-auto pt-2">
+          {/* Icons only */}
+          <ul className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <li key={tag.name}>
-                <span
-                  className={`flex gap-x-2 rounded-full text-xs mb-1 py-1 px-2 ${tag.class}`}
-                >
+              <li key={tag.name} title={tag.name}>
+                <span className={`flex items-center justify-center p-1.5 rounded-md ${tag.class}`}>
                   {tag.icon}
-                  {/* {tag.name} */}
                 </span>
               </li>
             ))}
           </ul>
+
+          {/* Actions */}
+          <div className="flex items-center gap-2">
+            {!isPrivate && github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 text-sm font-medium text-gray-200 transition-all duration-200"
+              >
+                <GithubIcon className="size-4" />
+                Code
+              </a>
+            )}
+            {link && (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-sm font-medium text-white transition-colors duration-200"
+              >
+                <ExternalLink className="size-4" />
+                Demo
+              </a>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="w-full md:w-1/2 md:max-w-lg">
-        <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
-          {title}
-        </h3>
-        <div className="mt-2 text-gray-700 dark:text-gray-400">
-          {description}
-        </div>
-        <footer className="flex items-end justify-start mt-4 gap-x-4">
-          {github && !isPrivate &&(
-            <LinkButton url={github}>
-              <GithubIcon className="size-6" />
-              Code
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton url={link}>
-              <ExternalLink className="size-6" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
       </div>
     </article>
   );
