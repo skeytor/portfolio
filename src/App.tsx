@@ -15,8 +15,8 @@ export const App = () => {
   return (
     <>
       <Header />
-      <main className="px-4">
-        <SectionContainer id="top" className="py-44 pb-24">
+      <main>
+        <SectionContainer id="top" className="py-28 sm:py-44 pb-16 sm:pb-24">
           <Hero />
         </SectionContainer>
         <SectionContainer id="experience">

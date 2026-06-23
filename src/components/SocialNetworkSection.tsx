@@ -29,7 +29,7 @@ const SOCIAL_NETWORKS: SocialNetwork[] = [
 
 export const SocialNetworkSection = () => {
   return (
-    <nav className="flex gap-x-4 mt-6">
+    <nav className="flex flex-wrap gap-3 mt-6">
       {SOCIAL_NETWORKS.map((socialNetwork) => (
         <SocialPill key={socialNetwork.url} url={socialNetwork.url}>
           {socialNetwork.icon} {socialNetwork.label}
