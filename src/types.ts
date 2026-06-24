@@ -1,44 +1,22 @@
-export interface FormState {
-  email: string;
-  name: string;
-  message: string;
+import { TAGS } from "./utilities/tags";
+
+interface Project {
+  title: string;
+  description: string;
+  link?: string;
+  github: string;
+  images?: string[];
+  tags: Tag[];
+  isPrivate: boolean;
 }
-export interface ExperienceItem {
+interface ExperienceItem {
   date: string;
   title: string;
   description: string;
   company?: string;
   link?: string;
 }
-export interface Project {
-  title: string;
-  description: string;
-  link?: string;
-  github: string;
-  image: string;
-  tags: Tag[];
-  isPrivate?: boolean;
-}
 
-type TagType =
-  | "C#"
-  | "SQL Server"
-  | "Docker"
-  | "JWT"
-  | "Swagger"
-  | "Git"
-  | "Github"
-  | "Angular"
-  | "MaterialUI"
-  | "UML"
-  | ".NET Core"
-  | "Python"
-  | "Django"
-  | "PostgreSQL"
-  | "Azure DevOps";
+type Tag = keyof typeof TAGS;
 
-interface Tag {
-  name: TagType;
-  icon: JSX.Element;
-  class: string;
-}
+export type { Project, ExperienceItem, Tag, };
