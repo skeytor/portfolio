@@ -23,9 +23,9 @@ Single-page React portfolio built with Vite, TypeScript, and Tailwind CSS. The C
 **Data lives in the page components**, not in separate data files:
 - `src/pages/Projects.tsx` — `PROJECTS` array with typed `Project` objects; tags reference a local `TAGS` array of `Tag` objects (each tag has a name, icon component, and Tailwind class)
 - `src/pages/Experience.tsx` — similar inline data pattern
-- `src/types.d.ts` — shared interfaces: `Project`, `ExperienceItem`, `FormState`, `Tag`, and the `TagType` union
+- `src/types.ts` — shared interfaces: `Project`, `ExperienceItem`, `FormState`, `Tag`, and the `TagType` union
 
-**Adding a new technology tag** requires: (1) creating an icon in `src/icons/`, (2) adding an entry to the `TAGS` array in `Projects.tsx`, and (3) extending the `TagType` union in `types.d.ts`.
+**Adding a new technology tag** requires: (1) creating an icon in `src/icons/`, (2) adding an entry to the `TAGS` array in `Projects.tsx`, and (3) extending the `TagType` union in `src/types.ts`.
 
 **Icons** (`src/icons/`) are plain React SVG components that accept a `className` prop.
 
