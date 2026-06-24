@@ -90,6 +90,37 @@ const TAGS: Tag[] = [
 
 const PROJECTS: Project[] = [
   {
+    title: "SGIP",
+    description: ``,
+    github: "https://github.com/skeytor/SEGIP-Challenge",
+    image: "code-1.webp",
+    tags: TAGS.filter((tag) =>
+      [
+        "C#",
+        ".NET Core",
+        "xUnit",
+        "PostgreSQL",
+        "Docker",
+        "Azure DevOps",
+        "Swagger",
+        "Git",
+      ].includes(tag.name),
+    ),
+    isPrivate: false,
+  },
+  {
+    title: "NetBroadcast",
+    description: `A multi-client TCP broadcast console chat application built from scratch. It allows users to send and receive messages in real-time.
+    The application has a server that manages the connections and broadcasts messages to all connected clients by using TCP sockets and Channel-based communication.
+    `,
+    github: "https://github.com/skeytor/NetBroadcast",
+    image: "code-1.webp",
+    tags: TAGS.filter((tag) =>
+      ["C#", ".NET Core", "Docker", "Git"].includes(tag.name),
+    ),
+    isPrivate: false,
+  },
+  {
     title: "AuthHub",
     description: `A secure authentication and authorization API focused on role-based access control with permission-based policies. Roles can be added dynamically without touching the source code, thanks to a custom authorization attribute that handles policy evaluation at runtime.`,
     github: "https://github.com/skeytor/AuthHub",
@@ -98,49 +129,11 @@ const PROJECTS: Project[] = [
       [
         "C#",
         ".NET Core",
+        "xUnit",
         "SQL Server",
         "Docker",
         "JWT",
         "Swagger",
-        "Git",
-      ].includes(tag.name),
-    ),
-    isPrivate: false,
-  },
-  {
-    title: "ComuniTrack",
-    description: `A web system for managing and tracking internal letters across an organization. Built with ASP.NET Core and the CQRS pattern for performance, it uses SQL Server as the database and Angular 17 with Angular Material for the frontend.`,
-    github: "https://github.com/skeytor/comunitrack",
-    image: "code-1.webp",
-    tags: TAGS.filter((tag) =>
-      [
-        "C#",
-        ".NET Core",
-        "SQL Server",
-        "Docker",
-        "Angular",
-        "MaterialUI",
-        "UML",
-        "JWT",
-        "Git",
-        "Azure DevOps",
-      ].includes(tag.name),
-    ),
-    isPrivate: true,
-  },
-  {
-    title: "Inventory System",
-    description: `A web application for managing product stock across logistics and warehouse operations. Built with Django (MVC) and a normalized PostgreSQL database on the backend, and Angular with Tailwind CSS on the frontend.`,
-    github: "https://github.com/skeytor/sistema-inventario-angular",
-    image: "code-1.webp",
-    tags: TAGS.filter((tag) =>
-      [
-        "Python",
-        "Django",
-        "PostgreSQL",
-        "Angular",
-        "UML",
-        "JWT",
         "Git",
         "Azure DevOps",
       ].includes(tag.name),
