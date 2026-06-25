@@ -8,7 +8,7 @@ const PROJECTS: Project[] = [
       users simulate loans, view full payment schedules before committing, 
       and request loans that are auto-approved based on business rules. 
       It also registers transactions with idempotency guarantees to prevent duplicate charges.`,
-    github: "https://github.com/skeytor/SEGIP-Challenge",
+    github: "https://github.com/skeytor/SGIP",
     link: "https://segip-challenge.vercel.app/",
     tags: [
       "csharp",
